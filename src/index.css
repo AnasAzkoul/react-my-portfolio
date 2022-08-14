@@ -30,24 +30,34 @@ body{
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  /* max-width: var(--max-width); */
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 section{
   width: 90vw;   
 }
 
-/* Navigation */
-
-.nav-container{
-  height: 5rem;
-  width: 90vw;
+/* buttons */
+.btn{
+  padding: 1rem 2.5rem; 
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  color: var(--clr-primary-4);
+  background-color: transparent;
+  border: 1px solid var(--clr-primary-4);
+  cursor: pointer;
+  transition: all 0.2s linear;
 }
 
-.nav-center{
-  display: flex;
-  justify-content: flex-end;
-  position: relative; 
+.btn:hover{
+  background-color: var(--clr-primary-4);
+  color: var(--clr-primary-1);
+  transform: translateY(-0.3rem);
+}
+
+.btn:active{
+  transform: translateY(-0.1rem);
 }
 
 .icon-btn{
@@ -57,186 +67,54 @@ section{
   font-size: 3rem;
   background: transparent;
   border: none;
-
 }
 
-.nav-toggle{
-  color: var(--clr-primary-2); 
-  position: absolute;
-  top: 2.5rem;
-}
-
-.nav-links{
-  display: none;
-}
-
-@media screen and (min-width: 800px){
-  .nav-toggle{
-    display: none;
-  }
-  .nav-links{
-    display: flex;
-    text-decoration: none;
-    list-style-type: none;
-  }
-  .nav-links li {
-    margin: 0 4rem;
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
   }
 
-  .nav-links li a{
-    text-transform: capitalize;
-    text-decoration: none;
-    color: #ccc; 
-    font-size: 2.5rem;
+  to {
+    opacity: 1;
   }
 }
 
+@keyframes moveFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translate(0.5rem);
+  }
 
-/* Profile */
-.profile-section{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-@media screen and (min-width: 800px){
-  .profile-section{
-    flex-direction: row;
-    justify-content: space-evenly;
+  100% {
+    opacity: 1;
+    transform: translate(0);
   }
 }
 
-/* profile-info */
-.profile-info{
-  margin-top: 5rem;
-  text-align: left;
-  font-size: 4rem;
+@keyframes moveFromBottom {
+  0%{
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+  80%{
+    transform: translateY(0.5rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.profile-info span {
-  display: block;
-  background-image: 
-  linear-gradient(135deg,var(--clr-primary-2) 0%,var(--clr-primary-3) 100%);
-  background-clip: text;
-  color: transparent;
-  text-transform: capitalize;
-  letter-spacing: 0.1rem;
-}
-
-/* profile image styles */
-
-.img-container{
-  width: 30rem;
-  height: 30rem;
-  position: relative;
-  border-radius: 50%;
-}
-
-.img-container img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  border-radius: 50%;
-  object-fit: cover;
-  position: relative;
-}
-
-/* buttons */
-
-.btn{
-  padding: 1rem 2.5rem; 
-  font-size: 2.5rem;
-  text-transform: capitalize;
-  color: var(--clr-primary-4);
-  background-color: transparent;
-  border: 1px solid var(--clr-primary-4);
-  cursor: pointer;
-}
-
-.profile-btn{
-  margin-top: 3rem;
-}
-
-/* sidebar */
-
-.sidebar-container{
-  text-align: left;
-}
-
-.sidebar-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 2rem 4rem;  
-}
-
-.sidebar-header-info span{
-  display: block;
-  text-transform: uppercase;
-  font-family: sans-serif;
-}
-
-.info-main{
-  font-size: 8rem;
-  background-image: 
-  linear-gradient(135deg,var(--clr-primary-2) 0%,var(--clr-primary-3) 100%);
-  background-clip: text;
-  color: transparent;
-}
-
-.info-sub{
-  font-size: 2rem;
-  color: #a0a0a0; 
-  letter-spacing: 0.2rem;
-}
-
-.sidebar-toggle {
-  color: var(--clr-primary-3);
-  position: relative;
-  top: -3rem;
-  right: -3rem;
-}
-
-.links{
-  margin-bottom: 2rem;
-  margin-left: 4rem;
-  list-style-type: none;
-  margin-top: 2rem;
-}
-
-.links li{
-  margin-top: 2rem;
-}
-
-.links a {
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.3rem;
-  font-size: 2.5rem;
-  color: var(--clr-primary-4); 
-  font-weight: 200; 
-}
-
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--clr-primary-1);
-  transition: all 0.3s linear;
-  transform: translate(-100%); 
-  z-index: -1;
-}
-
-.show-sidebar{
-  transform: translate(0);
-  z-index: 999;
-}
-
-@media screen and (min-width: 800px){
-  .sidebar{
-    display: none;
+@keyframes rotate {
+  0%{
+    transform: rotate(360deg);
+  }
+  
+  100%{
+    transform: rotate(0deg);
   }
 }
