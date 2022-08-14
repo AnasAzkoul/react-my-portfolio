@@ -5,121 +5,56 @@ import styled from 'styled-components';
 const Hero = () => {
   return (
     <>
-      <Wrapper>
-        <div className='section-center'>
-          <div className='img-container'>
-            <img src={profileImg2} alt='' />
-          </div>
-          <div className='info-container'>
-            <h1 className='profile-info'>
-              <span>Hi,</span>
-              <span>I'm Anas,</span>
-              <span>a Web developer</span>
-            </h1>
-            <button type='button' className='btn profile-btn'>
-              contact me
-            </button>
-          </div>
+      <HeroContainer>
+        <div className="hero-center">
+          <h1>Hi, my name is</h1>
+          <span className='name'>Anas Azkoul</span>
+          <span>I'm a web developer</span>
+          <p>
+            Laboris enim eiusmod anim in nulla fugiat sunt veniam nulla veniam ex dolore ullamco. Minim sit consectetur occaecat sint.
+          </p>
+          <button className='btn'>Contact Me</button>
         </div>
-      </Wrapper>
-      <TechStackContainer>
-        {techStack.map((item, index) => {
-          const { id, text, logo, style } = item;
-          return (
-            <li key={id}>
-              <span className='logo' style={style}>
-                {logo}
-              </span>
-              <span className='name'> {text}</span>
-            </li>
-          );
-        })}
-      </TechStackContainer>
+      </HeroContainer>
     </>
   );
 }
 
 export default Hero; 
 
-const Wrapper = styled.section`
+const HeroContainer = styled.section`
+  width: 75vw;
+  height: 100vh;
+  max-width: 75vw;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-
-  .img-container {
-    width: 20rem;
-    height: 20rem;
-    position: relative;
-    border-radius: 50%;
-
-    img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      border-radius: 50%;
-      object-fit: cover;
-      position: relative;
-      animation: fade-in ease 5s;
-    }
-  }
-
-  .info-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* padding-bottom: 5rem; */
-  }
-
-  .profile-info {
-    /* margin-top: 5rem; */
-    color: var(--clr-primary-7);
-    text-align: left;
-    font-size: 2.4rem;
-    display: flex;
-    flex-direction: column;
-    text-transform: capitalize;
-    letter-spacing: 0.1rem;
-    animation: moveFromLeft 2s ease-out;
-  }
-
-  .profile-btn {
-    margin-top: 3.5rem;
-    animation: moveFromBottom 2s ease-out;
-  }
-
-  @media screen and (min-width: 800px) {
-    margin: 3rem auto;
-    flex-direction: row;
-    justify-content: center;
-
-    .section-center {
-      display: flex;
-    }
-
-    .img-container {
-      margin-right: 5rem;
-    }
-  }
-`; 
-
-
-const TechStackContainer = styled.ul`
-  display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 60rem;
-  margin: 0rem auto;
-  font-size: 1.2rem;
-  list-style-type: none;
-  animation: fade-in 2s ease-in-out;
 
-  li {
+  .hero-center {
     display: flex;
-    align-items: center;
-    margin-right: 2rem;
-    text-transform: uppercase;
-  }
+    flex-direction: column;
 
-  li .logo {
-    font-size: 2.5rem;
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 400;
+      letter-spacing: 0.2rem;
+      color: var(--clr-primary-4);
+    }
+
+    .name {
+      text-transform: capitalize;
+      color: #eeebd0;
+    }
+
+    span {
+      font-size: 5rem;
+      font-weight: 500;
+      color: #ccc;
+    }
+    p{
+      width: 40rem;
+      margin-top: 1.5rem;
+    }
   }
 `; 
