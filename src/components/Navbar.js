@@ -69,27 +69,28 @@ const Wrapper = styled.nav`
       display: flex;
       text-decoration: none;
       list-style-type: none;
-    }
-    .nav-links li {
-      margin: 0 4rem;
-      transition: all 0.3s ease-out;
-    }
 
-    .nav-links li:hover::after {
-      content: '';
-      display: block;
-      background-color: var(--clr-primary-4);
-      height: 0.3rem;
-      animation: moveFromLeft 1s;
-    }
+      li {
+        margin: 0 4rem;
+        transition: all 0.3s ease-out;
 
-    .nav-links li a {
-      text-transform: capitalize;
-      text-decoration: none;
-      color: #ccc;
-      font-size: 1.4rem;
-      letter-spacing: 0.2rem;
-      text-transform: uppercase;
+        :hover::after {
+          content: '';
+          display: block;
+          background-color: var(--clr-primary-4);
+          height: 0.3rem;
+          animation: moveFromLeft 1s;
+        }
+
+        a {
+          text-transform: capitalize;
+          text-decoration: none;
+          color: var(--clr-primary-7);
+          font-size: 1.4rem;
+          letter-spacing: 0.2rem;
+          text-transform: uppercase;
+        }
+      }
     }
   }
 `; 

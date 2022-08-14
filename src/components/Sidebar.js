@@ -101,27 +101,27 @@ const Wrapper = styled.div`
     margin-left: 4rem;
     list-style-type: none;
     margin-top: 2rem;
-  }
 
-  .links li {
-    margin-top: 3rem;
-    transition: all 0.3s ease-in;
-  }
+    li {
+      margin-top: 3rem;
+      transition: all 0.3s ease-in;
 
-  .links li:hover {
-    padding: 0;
-    background-color: #a0a0a0;
-    color: white;
-    cursor: pointer;
-  }
+      :hover {
+        padding: 0;
+        background-color: #a0a0a0;
+        color: white;
+        cursor: pointer;
+      }
+    }
 
-  .links a {
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
-    font-size: 1.6rem;
-    color: white;
-    font-weight: 200;
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+      font-size: 1.6rem;
+      color: white;
+      font-weight: 200;
+    }
   }
 
   @media screen and (min-width: 800px) {

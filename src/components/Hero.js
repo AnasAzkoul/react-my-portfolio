@@ -71,6 +71,7 @@ const Wrapper = styled.section`
 
   .profile-info {
     /* margin-top: 5rem; */
+    color: var(--clr-primary-7);
     text-align: left;
     font-size: 2.4rem;
     display: flex;
@@ -84,7 +85,7 @@ const Wrapper = styled.section`
     margin-top: 3.5rem;
     animation: moveFromBottom 2s ease-out;
   }
-  
+
   @media screen and (min-width: 800px) {
     margin: 3rem auto;
     flex-direction: row;
@@ -109,6 +110,7 @@ const TechStackContainer = styled.ul`
   margin: 0rem auto;
   font-size: 1.2rem;
   list-style-type: none;
+  animation: fade-in 2s ease-in-out;
 
   li {
     display: flex;
