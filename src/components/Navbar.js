@@ -70,8 +70,11 @@ const NavContainer = styled.nav`
       align-items: center;
       
       .btn-resume{
-        padding: 0.5rem 1.5rem;
+        padding: 0.6rem 1.5rem;
         width: 10rem;
+        font-size: 1.1rem;
+        letter-spacing: 0.15rem;
+        text-transform: uppercase;
       }
 
       .nav-links {

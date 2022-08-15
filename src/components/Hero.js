@@ -7,8 +7,8 @@ const Hero = () => {
     <HeroContainer>
       <div className="hero-center">
         <h1>Hi, my name is</h1>
-        <span className='name'>Anas Azkoul</span>
-        <span>I'm a web developer</span>
+        <span className='name'>Anas Azkoul.</span>
+        <span>I'm a web developer.</span>
         <p>
           Laboris enim eiusmod anim in nulla fugiat sunt veniam nulla veniam ex dolore ullamco. Minim sit consectetur occaecat sint.
         </p>
@@ -24,7 +24,8 @@ const HeroContainer = styled.section`
   width: 75vw;
   height: 100vh;
   max-width: 75vw;
-  margin: 0 auto;
+  padding: 0 15rem;
+  margin: 0 15rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,9 +54,11 @@ const HeroContainer = styled.section`
       font-weight: 500;
       color: #ccc;
     }
-    p{
+    
+    p {
       width: 40rem;
       margin-top: 1.5rem;
+      color: var(--clr-primary-6);
     }
   }
 `; 
