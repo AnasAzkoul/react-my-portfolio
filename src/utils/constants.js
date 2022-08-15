@@ -8,22 +8,17 @@ import { SiMongodb } from 'react-icons/si';
 
 export const links = [
   {
-    id: 1, 
+    id: '01', 
     text: 'About', 
     url: '/about'
   }, 
   {
-    id: 2, 
-    text: 'My Skills', 
-    url: '/my-skills'
-  }, 
-  {
-    id: 3, 
+    id: '03', 
     text: 'projects', 
     url: '/projects'
   }, 
   {
-    id: 4, 
+    id: '04', 
     text: 'Contact', 
     url: '/contact'
   }
